@@ -63,3 +63,29 @@ Datetime Module Usage:
 Import the datetime module to work with dates and times.
 Use the strftime method of the datetime module to format the current date and time.
 
+Instructions
+
+To interact with the Library Management System implemented in the provided Python code, follow these instructions:
+
+Run the Program:
+
+Execute the Python script named library_management.py.
+Interact with the System:
+Upon running the program, you'll be presented with a menu.
+Options include displaying books, issuing a book, returning a book, or exiting.
+
+Perform Actions:
+
+To view available books, choose option 1.
+To borrow a book, select option 2 and provide the book ID and your name.
+To return a borrowed book, select option 3 and provide the book ID.
+
+Exit the Program:
+
+To exit, choose option 4. You'll receive a goodbye message.
+
+Notes:
+
+Enter valid inputs as prompted.
+Book IDs are automatically generated.
+Issued books record the borrowing date and time.
