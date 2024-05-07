@@ -13,13 +13,18 @@ class Library:
         self.name = name
         self.books = {}
 
-    def add_book(self, book_id, title):
-        self.books[book_id] = Book(book_id, title)
+   def add_books(self, titles):
+        for i, title in enumerate(titles, start=1000):
+            self.books[str(i)] = Book(str(i), title)
 
     def display_books(self):
-        print("Book ID\t\tTitle\t\t\t\tStatus")
+        print("------------------------List of Books---------------------")
+        print("Books ID", "\t", "Title", "\t\t\t", "Status")
+        print("----------------------------------------------------------")
         for book_id, book in self.books.items():
-            print(f"{book_id}\t\t{book.title}\t\t{book.status}")
+            print(book_id, "\t\t", book.title)
+            print("\t\t\t", book.status)
+            print("----------------------------------------------------------")
 
     def issue_book(self, book_id, lender_name):
         book = self.books.get(book_id)
