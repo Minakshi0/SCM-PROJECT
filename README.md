@@ -1,6 +1,10 @@
-Team Members:
+Source Code Management Project:
 
-Minakshi Sharma   2310990573  , Mohit Kumar   2310990574 ,  Monika Meena   2310990575
+Collaborators:
+
+Minakshi Sharma  (2310990573)  
+Mohit Kumar      (2310990574)  
+Monika Meena     (2310990575)
 
 Library Management System
 
