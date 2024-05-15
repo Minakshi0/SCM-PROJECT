@@ -1,4 +1,4 @@
-import datetime
+ import datetime
 
 class Book:
     def __init__(self, book_id, title):
@@ -13,7 +13,7 @@ class Library:
         self.name = name
         self.books = {}
 
-   def add_books(self, titles):
+    def add_books(self, titles):
         for i, title in enumerate(titles, start=1000):
             self.books[str(i)] = Book(str(i), title)
 
@@ -27,8 +27,8 @@ class Library:
             print("----------------------------------------------------------")
 
     def issue_book(self, book_id, lender_name):
-        book = self.books.get(book_id)
-        if book:
+        if book_id in self.books:
+            book = self.books[book_id]
             if book.status == "Available":
                 book.status = "Issued"
                 book.lender_name = lender_name
@@ -40,8 +40,8 @@ class Library:
             print("Book not found.")
 
     def return_book(self, book_id):
-        book = self.books.get(book_id)
-        if book:
+        if book_id in self.books:
+            book = self.books[book_id]
             if book.status == "Issued":
                 book.status = "Available"
                 book.lender_name = ""
@@ -55,8 +55,9 @@ class Library:
 if __name__ == "__main__":
     library = Library("Python's Library")
 
+    # List of book titles
     book_titles = [
-         "Introduction to Computer Science",
+        "Introduction to Computer Science",
         "Algorithms and Data Structures",
         "Computer Architecture: A Quantitative Approach",
         "Operating Systems Concepts",
@@ -158,8 +159,7 @@ if __name__ == "__main__":
         "Principles of Cyber-Physical Security"
     ]
 
-    for i, title in enumerate(book_titles, start=1000):
-        library.add_book(str(i), title)
+    library.add_books(book_titles)
 
     while True:
         print("\n----------Welcome To", library.name, "---------")
@@ -183,3 +183,4 @@ if __name__ == "__main__":
             break
         else:
             print("Invalid choice. Please try again.")
+
