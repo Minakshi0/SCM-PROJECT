@@ -1,9 +1,7 @@
 Source Code Management Project:
 
-
-
 Minakshi Sharma  (2310990573)   
-Mohit Kumar yadav (2310990574)  
+Mohit Kumar      (2310990574)  
 Monika Meena     (2310990575)
 
 Library Management System
@@ -93,3 +91,10 @@ Notes:
 Enter valid inputs as prompted.
 Book IDs are automatically generated.
 Issued books record the borrowing date and time.
+
+Issue that might occur:
+Performance Issues: The system may experience performance issues such as slow response times, long loading times for large datasets, or inefficient database queries.
+
+Security Vulnerabilities: Security vulnerabilities could compromise the confidentiality, integrity, or availability of library data. This might include issues with user authentication, data encryption, or access controls.
+
+Data Integrity Problems: Issues related to data integrity could arise, such as incorrect or missing information in book records, discrepancies between the system's database and physical inventory, or data corruption
