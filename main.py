@@ -9,9 +9,49 @@ class Book:
         self.lend_date = ""
 
 class Library:
-    def __init__(self, name):
-        self.name = name
-        self.books = {}
+      def search_books_by_title(self, title):
+        found_books = []
+        for book_id, book in self.books.items():
+            if title.lower() in book.title.lower():
+                found_books.append((book_id, book.title, book.status))
+        if found_books:
+            print("-------------------Books Found-------------------")
+            print("Books ID", "\t", "Title", "\t\t\t", "Status")
+            print("-------------------------------------------------")
+            for book in found_books:
+                print(book[0], "\t\t", book[1])
+                print("\t\t\t", book[2])
+            print("-------------------------------------------------")
+        else:
+            print("No books found with that title.")
+
+    def search_books_by_status(self, status):
+        found_books = []
+        for book_id, book in self.books.items():
+            if book.status.lower() == status.lower():
+                found_books.append((book_id, book.title))
+        if found_books:
+            print("----------------Books Found----------------")
+            print("Books ID", "\t", "Title")
+            print("--------------------------------------------")
+            for book in found_books:
+                print(book[0], "\t\t", book[1])
+            print("--------------------------------------------")
+        else:
+            print("No books found with that status.")
+
+    def list_issued_books(self):
+        issued_books = [(book_id, book.title, book.lender_name, book.lend_date) for book_id, book in self.books.items() if book.status == "Issued"]
+        if issued_books:
+            print("-------------Issued Books-------------")
+            print("Books ID", "\t", "Title", "\t\t\t", "Lender Name", "\t", "Issue Date")
+            print("-------------------------------------")
+            for book in issued_books:
+                print(book[0], "\t\t", book[1], "\t\t", book[2], "\t", book[3])
+            print("-------------------------------------")
+        else:
+            print("No books are currently issued.")
+
 
     def add_books(self, titles):
         for i, title in enumerate(titles, start=1000):
