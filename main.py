@@ -48,7 +48,8 @@ class Library:
                 book.lender_name = ""
                 book.lend_date = ""
                 print("Book returned successfully!")
-            
+        else:
+         print("This book is not issued.")
                 
         else:
             print("Book not found.")
