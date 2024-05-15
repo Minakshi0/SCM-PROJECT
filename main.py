@@ -39,18 +39,7 @@ class Library:
         else:
             print("Book not found.")
 
-    def return_book(self, book_id):
-        book = self.books.get(book_id)
-        if book:
-            if book.status == "Issued":
-                book.status = "Available"
-                book.lender_name = ""
-                book.lend_date = ""
-                print("Book returned successfully!")
-            else:
-                print("This book is not issued.")
-        else:
-            print("Book not found.")
+  
 
 if __name__ == "__main__":
     library = Library("Python's Library")
