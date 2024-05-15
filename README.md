@@ -1,6 +1,6 @@
 Source Code Management Project:
 
-Collaborators:
+
 
 Minakshi Sharma  (2310990573)   
 Mohit Kumar yadav (2310990574)  
