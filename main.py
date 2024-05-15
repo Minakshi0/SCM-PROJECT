@@ -36,8 +36,7 @@ class Library:
                 print("Book issued successfully!")
             else:
                 print("Sorry, the book is not available.")
-        else:
-            print("Book not found.")
+        
 
     def return_book(self, book_id):
         if book_id in self.books:
