@@ -179,7 +179,7 @@ if __name__ == "__main__":
             book_id = input("Enter the book ID: ")
             library.return_book(book_id)
         elif choice == "4":
-            print("Thank you for using the library. Goodbye!")
+            print("Thank you for using the library.\n See you next time!")
             break
         else:
             print("Invalid choice. Please try again.")
