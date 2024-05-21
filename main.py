@@ -22,8 +22,7 @@ class Library:
         print("Books ID", "\t", "Title", "\t\t\t", "Status")
         print("----------------------------------------------------------")
         for book_id, book in self.books.items():
-            print(book_id, "\t\t", book.title)
-            print("\t\t\t", book.status)
+            print(f"{book_id}\t\t{book.title}\t\t{book.status}")
             print("----------------------------------------------------------")
 
     def issue_book(self, book_id, lender_name):
@@ -179,7 +178,7 @@ if __name__ == "__main__":
             book_id = input("Enter the book ID: ")
             library.return_book(book_id)
         elif choice == "4":
-            print("Thank you for using the library.\n See you next time!")
+            print("Thank you for using the library. Goodbye!")
             break
         else:
             print("Invalid choice. Please try again.")
